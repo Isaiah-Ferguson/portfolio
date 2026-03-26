@@ -358,7 +358,7 @@ export default function Home() {
                 <article className="group/item relative p-[1.5rem] -mx-[1.5rem] transition-all duration-300 hover:bg-surface-container/80 hover:backdrop-blur-md hover:translate-x-[2px] group-hover/section:opacity-50 hover:!opacity-100 rounded-lg">
                   <a href="#" className="block">
                     <h3 className="text-[1.125rem] font-medium text-on-surface transition-colors duration-300 mb-[1rem] flex items-center gap-[0.5rem] group-hover/item:text-primary">
-                      Team Cama Wesbite
+                      Team Cama Website
                       <svg className="w-4 h-4 transition-transform duration-300 group-hover/item:translate-x-[2px] group-hover/item:-translate-y-[2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -391,7 +391,7 @@ export default function Home() {
                   <p className="text-[1rem] text-primary leading-relaxed mb-[1rem]">
 Led the redesign of the San Joaquin County Family Justice Center website in WordPress, improving the overall design and updating graphics, navigation, and donation functionality.                  </p>
                   <div className="flex flex-wrap gap-[0.5rem]">
-                    {["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"].map((tech) => (
+                    {["WordPress", "PHP", "CSS", "Web Design", "UI/UX"].map((tech) => (
                       <span
                         key={tech}
                         className="bg-surface-container-highest text-primary text-[0.75rem] font-semibold px-[0.5rem] py-[0.175rem] rounded-md"
