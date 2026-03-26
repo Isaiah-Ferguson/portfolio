@@ -201,12 +201,23 @@ export default function Home() {
                   <p className="text-[1.125rem] text-on-surface-variant leading-relaxed">
                     Coding Advocate at SJCOE, bridging education and technology. Building robust backend systems with C# and EF Core, crafting modern frontends with Next.js—making coding education accessible and impactful.
                   </p>
-                  <div className="pt-[1rem]">
+                  <div className="pt-[1rem] flex flex-wrap gap-[1rem]">
                     <a
                       href="#contact"
                       className="inline-block bg-gradient-to-br from-primary to-primary-container text-on-primary font-semibold px-[2rem] py-[0.75rem] rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105"
                     >
                       Contact Me
+                    </a>
+                    <a
+                      href="/Resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-[0.5rem] bg-surface-container text-on-surface font-semibold px-[2rem] py-[0.75rem] rounded-lg transition-all duration-300 hover:bg-surface-container-high hover:shadow-lg hover:scale-105 border border-outline-variant/20"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      View Resume
                     </a>
                   </div>
                 </div>
@@ -215,6 +226,7 @@ export default function Home() {
                     src="/Isaiah.png"
                     alt="Isaiah Ferguson"
                     fill
+                    sizes="(max-width: 1024px) 240px, 280px"
                     className="object-cover"
                     priority
                   />
@@ -262,11 +274,12 @@ export default function Home() {
                       Sep 2025 — Present
                     </span>
                   </div>
-                  <p className="text-[1rem] text-primary leading-relaxed mb-[1rem]">
-                    Leading outreach efforts for CodeStack Academy, speaking in front of crowds and heading academy initiatives. Promoting the program through events, workshops, and informational sessions to attract prospective students.
-                  </p>
+                  <ul className="text-[1rem] text-primary leading-relaxed mb-[1rem] space-y-[0.5rem] list-disc list-inside">
+                    <li>Leading outreach efforts for CodeStack Academy, speaking in front of crowds and heading academy initiatives. Promoting the program through events, workshops, and informational sessions to attract prospective students.</li>
+                    <li><strong className="text-on-surface">SEIS (Special Education Information System):</strong> One of the largest special education platforms in California, used by over 90% of school districts. Contributed to the development of a C# .NET Web API and built dynamic form interfaces using AngularJS, supporting large-scale data management for thousands of users across the state.</li>
+                  </ul>
                   <div className="flex flex-wrap gap-[0.5rem]">
-                    {["Public Speaking", "Outreach", "Education", "Leadership"].map((tech) => (
+                    {["Public Speaking", "Outreach", "Education", "Leadership", "C#", ".NET Web API", "AngularJS"].map((tech) => (
                       <span
                         key={tech}
                         className="bg-surface-container-highest text-primary text-[0.75rem] font-semibold px-[0.5rem] py-[0.175rem] rounded-md"
@@ -308,34 +321,6 @@ export default function Home() {
                   </div>
                 </article>
 
-                <article className="group/item relative p-[1.5rem] -mx-[1.5rem] transition-all duration-300 hover:bg-surface-container/80 hover:backdrop-blur-md hover:translate-x-[2px] group-hover/section:opacity-50 hover:!opacity-100 rounded-lg">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-[0.5rem] mb-[1rem]">
-                    <div>
-                      <h3 className="text-[1.125rem] font-medium text-on-surface transition-colors duration-300">
-                        Outreach & Development
-                      </h3>
-                      <p className="text-[1rem] text-on-surface-variant">
-                        CodeStack Academy
-                      </p>
-                    </div>
-                    <span className="text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-on-tertiary-container">
-                      Jun 2023 — Sep 2023
-                    </span>
-                  </div>
-                  <p className="text-[1rem] text-primary leading-relaxed mb-[1rem]">
-                    Actively engaged in outreach efforts to promote the CodeStack Academy program, participating in events, workshops, and informational sessions to attract prospective students.
-                  </p>
-                  <div className="flex flex-wrap gap-[0.5rem]">
-                    {["Outreach", "Event Planning", "Community Engagement"].map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-surface-container-highest text-primary text-[0.75rem] font-semibold px-[0.5rem] py-[0.175rem] rounded-md"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </article>
               </div>
             </section>
 
@@ -347,7 +332,7 @@ export default function Home() {
                 <article className="group/item relative p-[1.5rem] -mx-[1.5rem] transition-all duration-300 hover:bg-surface-container/80 hover:backdrop-blur-md hover:translate-x-[2px] group-hover/section:opacity-50 hover:!opacity-100 rounded-lg">
                   <a href="#" className="block">
                     <h3 className="text-[1.125rem] font-medium text-on-surface transition-colors duration-300 mb-[1rem] flex items-center gap-[0.5rem] group-hover/item:text-primary">
-                      Educational Platform API
+                      Custom LMS
                       <svg className="w-4 h-4 transition-transform duration-300 group-hover/item:translate-x-[2px] group-hover/item:-translate-y-[2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -373,17 +358,38 @@ export default function Home() {
                 <article className="group/item relative p-[1.5rem] -mx-[1.5rem] transition-all duration-300 hover:bg-surface-container/80 hover:backdrop-blur-md hover:translate-x-[2px] group-hover/section:opacity-50 hover:!opacity-100 rounded-lg">
                   <a href="#" className="block">
                     <h3 className="text-[1.125rem] font-medium text-on-surface transition-colors duration-300 mb-[1rem] flex items-center gap-[0.5rem] group-hover/item:text-primary">
-                      Student Portfolio Dashboard
+                      Team Cama Wesbite
                       <svg className="w-4 h-4 transition-transform duration-300 group-hover/item:translate-x-[2px] group-hover/item:-translate-y-[2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </h3>
                   </a>
                   <p className="text-[1rem] text-primary leading-relaxed mb-[1rem]">
-                    Developed a modern, responsive dashboard using Next.js 14 with App Router, allowing 
-                    students to showcase their coding projects. Features server-side rendering, optimistic 
-                    UI updates, and real-time collaboration.
+                    Redesigned the TEAM CAMA website using Next.js, creating a modern, responsive interface that highlights programs, branding, and user experience.
                   </p>
+                  <div className="flex flex-wrap gap-[0.5rem]">
+                    {["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "WindSurf"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-surface-container-highest text-primary text-[0.75rem] font-semibold px-[0.5rem] py-[0.175rem] rounded-md"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+
+                                <article className="group/item relative p-[1.5rem] -mx-[1.5rem] transition-all duration-300 hover:bg-surface-container/80 hover:backdrop-blur-md hover:translate-x-[2px] group-hover/section:opacity-50 hover:!opacity-100 rounded-lg">
+                  <a href="#" className="block">
+                    <h3 className="text-[1.125rem] font-medium text-on-surface transition-colors duration-300 mb-[1rem] flex items-center gap-[0.5rem] group-hover/item:text-primary">
+                      San Joaquin County Family Justice Center Website
+                      <svg className="w-4 h-4 transition-transform duration-300 group-hover/item:translate-x-[2px] group-hover/item:-translate-y-[2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </h3>
+                  </a>
+                  <p className="text-[1rem] text-primary leading-relaxed mb-[1rem]">
+Led the redesign of the San Joaquin County Family Justice Center website in WordPress, improving the overall design and updating graphics, navigation, and donation functionality.                  </p>
                   <div className="flex flex-wrap gap-[0.5rem]">
                     {["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"].map((tech) => (
                       <span
@@ -431,10 +437,10 @@ export default function Home() {
               <div className="space-y-[1.5rem]">
                 <div>
                   <h3 className="text-[1rem] font-medium text-on-surface mb-[1rem]">
-                    Backend Development
+                    Languages
                   </h3>
                   <div className="flex flex-wrap gap-[0.5rem]">
-                    {["C#", "ASP.NET Core", "Entity Framework Core", "LINQ", "SQL Server", "PostgreSQL", "REST APIs", "GraphQL"].map((tech) => (
+                    {["C#", "TypeScript", "JavaScript", "HTML", "CSS", "SQL", "SQLite"].map((tech) => (
                       <span
                         key={tech}
                         className="bg-surface-container-highest text-primary text-[0.75rem] font-semibold px-[0.5rem] py-[0.175rem] rounded-md"
@@ -447,10 +453,10 @@ export default function Home() {
 
                 <div>
                   <h3 className="text-[1rem] font-medium text-on-surface mb-[1rem]">
-                    Frontend Development
+                    Frameworks & Libraries
                   </h3>
                   <div className="flex flex-wrap gap-[0.5rem]">
-                    {["Next.js", "React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Responsive Design"].map((tech) => (
+                    {["React", "React Native", "Next.js", "Angular", "Angular.js", "Tailwind CSS", "Bootstrap", "Flowbite", ".NET 7-10", "Entity Framework Core", "Blazor", "shadcn", "Unity3D"].map((tech) => (
                       <span
                         key={tech}
                         className="bg-surface-container-highest text-primary text-[0.75rem] font-semibold px-[0.5rem] py-[0.175rem] rounded-md"
@@ -463,10 +469,10 @@ export default function Home() {
 
                 <div>
                   <h3 className="text-[1rem] font-medium text-on-surface mb-[1rem]">
-                    Tools & Practices
+                    Tools & Platforms
                   </h3>
                   <div className="flex flex-wrap gap-[0.5rem]">
-                    {["Git", "Docker", "Azure", "CI/CD", "Agile", "Testing", "Code Review", "Mentoring"].map((tech) => (
+                    {["Azure DevOps", "Jira", "Azure Database Studios", "Visual Studio", "VS Code", "RESTful APIs", "GitHub", "Version Control", "Figma"].map((tech) => (
                       <span
                         key={tech}
                         className="bg-surface-container-highest text-primary text-[0.75rem] font-semibold px-[0.5rem] py-[0.175rem] rounded-md"
@@ -481,7 +487,7 @@ export default function Home() {
 
             <footer className="pt-[4rem] border-t border-outline-variant/15">
               <p className="text-[0.75rem] text-on-tertiary-container">
-                Built with Next.js and Tailwind CSS. Designed following the Digital Curator system.
+                Built with Next.js and Tailwind CSS.
               </p>
             </footer>
           </div>
