@@ -203,7 +203,7 @@ export default function Home() {
                   </p>
                   <div className="pt-[1rem] flex flex-wrap gap-[1rem]">
                     <a
-                      href="#contact"
+                      href="mailto:isaiahkferguson89@gmail.com"
                       className="inline-block bg-gradient-to-br from-primary to-primary-container text-on-primary font-semibold px-[2rem] py-[0.75rem] rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105"
                     >
                       Contact Me
@@ -235,7 +235,7 @@ export default function Home() {
             </section>
 
             <section id="about" className="mb-[4rem]">
-              <h2 className="text-[1.5rem] font-semibold text-on-surface mb-[1.5rem]">
+              <h2 className="text-[1.5rem] font-semibold text-on-surface mb-[1.5rem] -ml-[1rem]">
                 About
               </h2>
               <div className="space-y-[1rem] text-[1rem] text-on-surface-variant leading-relaxed">
@@ -256,7 +256,7 @@ export default function Home() {
             </section>
 
             <section id="experience" className="mb-[4rem] group/section transition-all duration-300">
-              <h2 className="text-[1.5rem] font-semibold text-on-surface mb-[2.75rem]">
+              <h2 className="text-[1.5rem] font-semibold text-on-surface mb-[2.75rem] -ml-[1rem]">
                 Experience
               </h2>
               <div className="space-y-[2.75rem]">
@@ -325,7 +325,7 @@ export default function Home() {
             </section>
 
             <section id="projects" className="mb-[4rem] group/section transition-all duration-300">
-              <h2 className="text-[1.5rem] font-semibold text-on-surface mb-[2.75rem]">
+              <h2 className="text-[1.5rem] font-semibold text-on-surface mb-[2.75rem] -ml-[1rem]">
                 Featured Projects
               </h2>
               <div className="space-y-[2.75rem]">
