@@ -330,7 +330,7 @@ export default function Home() {
               </h2>
               <div className="space-y-[2.75rem]">
                 <article className="group/item relative p-[1.5rem] -mx-[1.5rem] transition-all duration-300 hover:bg-surface-container/80 hover:backdrop-blur-md hover:translate-x-[2px] group-hover/section:opacity-50 hover:!opacity-100 rounded-lg">
-                  <a href="#" className="block">
+                  <a href="https://csa-lms-dusky.vercel.app/login" target="_blank" rel="noopener noreferrer" className="block">
                     <h3 className="text-[1.125rem] font-medium text-on-surface transition-colors duration-300 mb-[1rem] flex items-center gap-[0.5rem] group-hover/item:text-primary">
                       Custom LMS
                       <svg className="w-4 h-4 transition-transform duration-300 group-hover/item:translate-x-[2px] group-hover/item:-translate-y-[2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -356,7 +356,7 @@ export default function Home() {
                 </article>
 
                 <article className="group/item relative p-[1.5rem] -mx-[1.5rem] transition-all duration-300 hover:bg-surface-container/80 hover:backdrop-blur-md hover:translate-x-[2px] group-hover/section:opacity-50 hover:!opacity-100 rounded-lg">
-                  <a href="#" className="block">
+                  <a href="https://teamcamawebsite.vercel.app/" target="_blank" rel="noopener noreferrer" className="block">
                     <h3 className="text-[1.125rem] font-medium text-on-surface transition-colors duration-300 mb-[1rem] flex items-center gap-[0.5rem] group-hover/item:text-primary">
                       Team Cama Website
                       <svg className="w-4 h-4 transition-transform duration-300 group-hover/item:translate-x-[2px] group-hover/item:-translate-y-[2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -380,7 +380,7 @@ export default function Home() {
                 </article>
 
                                 <article className="group/item relative p-[1.5rem] -mx-[1.5rem] transition-all duration-300 hover:bg-surface-container/80 hover:backdrop-blur-md hover:translate-x-[2px] group-hover/section:opacity-50 hover:!opacity-100 rounded-lg">
-                  <a href="#" className="block">
+                  <a href="https://www.sjcfjcfoundation.org/" target="_blank" rel="noopener noreferrer" className="block">
                     <h3 className="text-[1.125rem] font-medium text-on-surface transition-colors duration-300 mb-[1rem] flex items-center gap-[0.5rem] group-hover/item:text-primary">
                       San Joaquin County Family Justice Center Website
                       <svg className="w-4 h-4 transition-transform duration-300 group-hover/item:translate-x-[2px] group-hover/item:-translate-y-[2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -403,7 +403,7 @@ Led the redesign of the San Joaquin County Family Justice Center website in Word
                 </article>
 
                 <article className="group/item relative p-[1.5rem] -mx-[1.5rem] transition-all duration-300 hover:bg-surface-container/80 hover:backdrop-blur-md hover:translate-x-[2px] group-hover/section:opacity-50 hover:!opacity-100 rounded-lg">
-                  <a href="#" className="block">
+                  <a href="https://csa-card-proj.vercel.app/" target="_blank" rel="noopener noreferrer" className="block">
                     <h3 className="text-[1.125rem] font-medium text-on-surface transition-colors duration-300 mb-[1rem] flex items-center gap-[0.5rem] group-hover/item:text-primary">
                       Code Challenge Platform
                       <svg className="w-4 h-4 transition-transform duration-300 group-hover/item:translate-x-[2px] group-hover/item:-translate-y-[2px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
