@@ -1,44 +1,124 @@
 @import "tailwindcss";
 
+/*
+ * Token system: committed-dark + warm grays + ochre accent.
+ * Anchor refs: Vercel · Linear · Pitchfork.
+ * See PRODUCT.md for strategy and DESIGN.md (after reshape) for full spec.
+ */
+
 @theme inline {
-  --color-surface: #0b1326;
-  --color-surface-container-lowest: #060e20;
-  --color-surface-container-low: #131b2e;
-  --color-surface-container: #1a2337;
-  --color-surface-container-high: #222a3d;
-  --color-surface-container-highest: #2a3347;
-  --color-surface-variant: #2d3449;
-  
-  --color-primary: #b5fff0;
-  --color-primary-container: #5eead4;
-  --color-on-primary: #0b1326;
-  
-  --color-on-surface: #dae2fd;
-  --color-on-surface-variant: #a8b3d1;
-  --color-on-tertiary-container: #565c63;
-  
-  --color-outline-variant: #3c4946;
-  
-  --font-sans: var(--font-inter);
-  
-  --spacing-0_5: 0.175rem;
-  --spacing-1: 0.35rem;
-  --spacing-1_5: 0.5rem;
-  --spacing-2: 0.75rem;
-  --spacing-3: 1rem;
-  --spacing-4: 1.25rem;
-  --spacing-5: 1.5rem;
-  --spacing-6: 1.75rem;
-  --spacing-8: 2.75rem;
-  --spacing-12: 4rem;
-  --spacing-16: 5.5rem;
-  --spacing-20: 7rem;
-  
-  --radius-sm: 0.125rem;
+  /* Surfaces — warm near-black (NOT navy), tonal ramp by layer */
+  --color-surface: #0d0d0e;
+  --color-surface-elevated: #161618;
+  --color-surface-high: #1f1f22;
+
+  /* Hairlines + borders */
+  --color-rule: #2a2a2d;
+  --color-rule-strong: #3a3a3e;
+
+  /* Foreground — warm grays, all AA-compliant on --color-surface */
+  --color-ink: #ebe9e3;          /* primary body text   ≈ 14:1 */
+  --color-ink-muted: #aeaba3;    /* secondary text       ≈ 7:1  */
+  --color-ink-soft: #888479;     /* meta, dates, labels  ≈ 4.7:1 (AA pass) */
+
+  /* Accent — burnt honey / ochre. Warm, not cyan, not red. */
+  --color-accent: #d4a157;       /* on --color-surface ≈ 9:1 */
+  --color-accent-hover: #e8b76d;
+  --color-accent-pressed: #b88842;
+
+  /* Type stacks */
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Radii — minimal. Editorial systems lean square. */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
 }
+
+/* ──────────────────────────────────────────
+   Base
+   ────────────────────────────────────────── */
 
 body {
   background: var(--color-surface);
-  color: var(--color-on-surface);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ──────────────────────────────────────────
+   Focus — visible everywhere, no exceptions
+   ────────────────────────────────────────── */
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+/* ──────────────────────────────────────────
+   Reduced motion
+   ────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ──────────────────────────────────────────
+   Selection
+   ────────────────────────────────────────── */
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+/* ──────────────────────────────────────────
+   Print — collapse the dark theme to ink-on-paper
+   ────────────────────────────────────────── */
+
+@media print {
+  :root {
+    --color-surface: #ffffff;
+    --color-surface-elevated: #ffffff;
+    --color-surface-high: #ffffff;
+    --color-rule: #cccccc;
+    --color-rule-strong: #888888;
+    --color-ink: #000000;
+    --color-ink-muted: #333333;
+    --color-ink-soft: #555555;
+    --color-accent: #000000;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  header[data-component="top-nav"],
+  [data-print-hide] {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }
