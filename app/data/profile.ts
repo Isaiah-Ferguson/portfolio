@@ -16,7 +16,7 @@ export const contact = {
   resume: "/Resume.pdf",
 };
 
-/** Student → Junior Web Developer → Coding Advocate → Project Lead & Mentor */
+/** Student → Junior Web Developer → Coding Advocate (project lead & mentor) */
 export const journey: JourneyMilestone[] = [
   {
     year: "2023",
@@ -31,16 +31,10 @@ export const journey: JourneyMilestone[] = [
       "Built full-stack features across SJCOE systems — C# and Azure backends, React frontends — including work on CAPTAIN and IHubSJ.org, while developing lesson plans for incoming students.",
   },
   {
-    year: "2025",
+    year: "2025 — Present",
     title: "Coding Advocate",
     detail:
-      "Became the academy's advocate — recruiting, guiding, and mentoring students entering technology, while contributing to SEIS, one of California's largest special-education platforms.",
-  },
-  {
-    year: "Today",
-    title: "Project Lead & Mentor",
-    detail:
-      "Leads technical projects with interns, community partners, students, and external clients — connecting education, workforce development, and the Stockton community.",
+      "The role he holds today — recruiting, guiding, and mentoring students entering technology while contributing to SEIS, one of California's largest special-education platforms. As part of that role he leads technical projects with interns, community partners, students, and external clients — connecting education, workforce development, and the Stockton community.",
   },
 ];
 

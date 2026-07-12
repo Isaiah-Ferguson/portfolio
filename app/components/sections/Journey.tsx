@@ -6,7 +6,8 @@ import { SectionShell, Panel } from "./SectionShell";
 
 /**
  * The sun chapter: SJCOE & CodeStack Academy — the center of the universe.
- * Student → Junior Web Developer → Coding Advocate → Project Lead & Mentor.
+ * Student → Junior Web Developer → Coding Advocate, a role that today
+ * includes project leadership and mentorship.
  */
 export function Journey() {
   const [openMoon, setOpenMoon] = useState<string | null>(sunResponsibilities[0].id);
@@ -35,7 +36,7 @@ export function Journey() {
               <li key={m.title} className={i === journey.length - 1 ? "" : "pb-7"}>
                 <span
                   aria-hidden
-                  className={`absolute -left-[5px] mt-1.5 block h-2.5 w-2.5 rounded-full ${
+                  className={`absolute -left-1.25 mt-1.5 block h-2.5 w-2.5 rounded-full ${
                     i === journey.length - 1
                       ? "bg-sun shadow-[0_0_10px_2px_rgba(232,180,90,0.5)]"
                       : "bg-rule-strong"
