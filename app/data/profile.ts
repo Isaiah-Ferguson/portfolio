@@ -107,14 +107,14 @@ export const about = {
       caption: "Coding Advocate — CodeStack Academy",
     },
     {
-      src: null,
-      alt: "Isaiah Ferguson during his time as a CodeStack Academy student",
-      caption: "CodeStack Academy student, 2023 — add photo",
+      src: "/CSA_Isaiah.png",
+      alt: "Isaiah Ferguson at work in a CodeStack Academy classroom",
+      caption: "CodeStack Academy student, 2023",
     },
     {
-      src: null,
-      alt: "Isaiah Ferguson teaching martial arts",
-      caption: "Jiu-Jitsu & Muay Thai — add photo",
+      src: "/Isaiah.jpg",
+      alt: "Isaiah Ferguson sparring during Muay Thai training",
+      caption: "On the mats — Muay Thai & Jiu-Jitsu",
     },
   ],
 };
